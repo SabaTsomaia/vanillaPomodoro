@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>MINIMAL.</title>
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
   
@@ -28,43 +29,75 @@
 
   <!-- BODY -->
   <main>
-    <section id="timer-section">
+    <section class="timer-section">
       <!-- The clock and buttons -->
       
     <div class="clock-container">
-       <div class="switch-btn">WORK</div>
-       <div class="switch-btn">SHORT BREAK</div>
-       <div class="switch-btn">LONG BREAK</div>
+       <div class="switch-btn active"><p>WORK</p></div>
+       <div class="switch-btn"><p>SHORT BREAK</p></div>
+       <div class="switch-btn"><p>LONG BREAK</p></div>
     </div>
 
-    <div class="clock">
-          <span id="minutes">25</span>:<span id="seconds">00</span>
-    </div>
+        <div class="clock">
+            <div class="time-container">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <p id="focus-subtitle">STAY FOCUSED</p>
+        </div>
 
 
     <div class="control-buttons">
-        <button id="reset-btn">Reset</button>
-        <button id="tgl-start-stop-btn">Start</button>
-        <button id="skip-btn">Skip</button>
+        <button id="reset-btn" class="control-btn" aria-label="Reset Timer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+        </svg>
+
+        </button>
+        <button id="tgl-start-stop-btn">START</button>
+        <button id="skip-btn" class="control-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 4 15 12 5 20 5 4"/>
+            <line x1="19" y1="5" x2="19" y2="19"/>
+        </svg>
+        </button>
     </div>
 
     <div class="stats-bar">
         <div class="stats-item">
-            <span id="pomodoro-count">0</span>
-            <span class="stats-label">Today's sessions</span>
+            <span id="todays-Sessions" class="stats-item-number">0</span>
+            <span class="stats-label">TODAY'S SESSION</span>
+        </div>
+        <div class="stats-item" id="middle-item-lines">
+            <span id="daily-Goal" class="stats-item-number">4</span>
+            <span class="stats-label">DAILY GOAL</span>
         </div>
         <div class="stats-item">
-            <span id="total-time">0m</span>
-            <span class="stats-label">Daily Goal</span>
-        </div>
-        <div class="stats-item">
-            <span id="total-time">0m</span>
-            <span class="stats-label">Daily Goal</span>
+            <span id="pending-tasks" class="stats-item-number">0</span>
+            <span class="stats-label">PENDING TASKS</span>
         </div>
     </div>
 
     </section>
-  </main>
+
+    <div class="quote-section">
+        <div class="quote-text-container">
+            <p id="quote-text">"saba saba sQUOTE 123 MAGARI DZLIERI QUOTE."</p>
+        </div>
+
+        <div class="author-inspire-container">
+            <p id="quote-author">-AUTHOR AUTHOR</p>
+            
+            <button id="inspire-quote-btn" class="inspire-btn">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+           </svg>
+            <span>INSPIRE</span>
+        </button>
+        </div>
+    </div>
+    </main>
 
   <!-- FOOTER -->
   <footer>
