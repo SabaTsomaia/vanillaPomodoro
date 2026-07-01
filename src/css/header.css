@@ -7,7 +7,6 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -51,7 +50,7 @@
     color: var(--text-primary);
 }
 
-.header-nav a.active {
+.active {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
