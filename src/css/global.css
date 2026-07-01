@@ -1,7 +1,6 @@
 /* src/css/global.css */
 
 :root {
-    /* Defining css variables */
     --bg-primary: #0d0d0d;
     --bg-surface: #1a1a1a;
     --text-primary: #ffffff;
@@ -27,6 +26,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto; /* Pushes footer to bottom */
 }
 
 a {
