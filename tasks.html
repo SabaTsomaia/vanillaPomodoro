@@ -3,34 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>MINIMAL.</title>
+    <title>MINIMAL. TASKS</title>
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/tasks.css">
 </head>
 <body>
     <header class="header">
         <div class="header-container">
             <a href="/" class="logo">
                 <span class="logo-dot"></span>
-                <span>MINIMAL</span>
+                <span>MINIMAL.</span>
             </a>
             <nav class="header-nav">
                 <ul>
                     <li><a href="/index.html">TIMER</a></li>
-                    <li><a href="/tasks.html">TASKS</a></li>
+                    <li><a href="/tasks.html" class="active">TASKS</a></li>
                     <li><a href="/settings.html">SETTINGS</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="visually-hidden">Focus Tasks</h1>
+            <p class="subtitle">KEEP YOUR BRAIN CLEAR OF OVERHEAD. CAPTURE AND PRIORITIZE ITEMS.</p>
+            <hr class="header-divider" />
+        </header>
+
+        <div class="layout-grid">
+            
+            <section class="task-form-container">
+                <h2 class="form-title">ADD FOCUS TASK</h2>
+                
+                <form class="task-form" id="addTaskForm">
+                    <div class="form-group">
+                        <label for="taskTitle" class="form-label">
+                            TASK TITLE <span class="required-asterisk">*</span>
+                        </label>
+                        <input type="text" id="taskTitle" name="taskTitle" class="form-input" placeholder="What are you working on?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskCategory" class="form-label">CATEGORY</label>
+                        <div class="custom-select-wrapper">
+                            <select id="taskCategory" name="taskCategory" class="form-input custom-select">
+                                <option value="work">💼 Work</option>
+                                <option value="personal">👤 Personal</option>
+                                <option value="study">📚 Study</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="form-label">PRIORITY LEVEL</span>
+                        <div class="priority-selector">
+                            <label class="priority-label" for="priorityLow">
+                                <input type="radio" id="priorityLow" name="taskPriority" value="low" class="visually-hidden" checked>
+                                <span class="priority-pill">
+                                    <span class="priority-dot dot-low"></span> Low
+                                </span>
+                            </label>
+                            
+                            <label class="priority-label" for="priorityMed">
+                                <input type="radio" id="priorityMed" name="taskPriority" value="med" class="visually-hidden">
+                                <span class="priority-pill">
+                                    <span class="priority-dot dot-med"></span> Med
+                                </span>
+                            </label>
+                            
+                            <label class="priority-label" for="priorityHigh">
+                                <input type="radio" id="priorityHigh" name="taskPriority" value="high" class="visually-hidden">
+                                <span class="priority-pill">
+                                    <span class="priority-dot dot-high"></span> High
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">ADD TASK</button>
+                </form>
+            </section>
+
+            <section class="task-board">
+                <header class="board-header">
+                    <nav class="board-tabs" aria-label="Task Status Filters">
+                        <button class="tab-btn active" aria-current="page">ALL</button>
+                        <button class="tab-btn">ACTIVE</button>
+                        <button class="tab-btn">COMPLETED</button>
+                    </nav>
+                    <button class="btn-text">CLEAR COMPLETED</button>
+                </header>
+
+                <div class="board-content empty-state">
+                    <div class="empty-state-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <polyline points="9 12 12 15 19 8"></polyline>
+                        </svg>
+                    </div>
+                    <p class="empty-state-text">No tasks added yet.</p>
+                    <p class="empty-state-subtext">GET A HEAD START BY WRITING YOUR FIRST TASK!</p>
+                </div>
+
+                <div class="board-footer">
+                    <div class="stat-item">
+                        <span class="stat-number">0</span> PENDING ITEMS
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span> TOTAL REGISTERED
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
     <footer>
-    <div class="footer-container">
-        <p>© MINIMALISTIC PRODUCTIVITY PLATFORM</p>
-        <p>POMODORO</p>
-    </div>
-  </footer>
+        <div class="footer-container">
+            <p>© 2026 MINIMALIST PRODUCTIVITY PLATFORM</p>
+            <p>BTU WEB DEV FINAL PROJECT</p>
+        </div>
+    </footer>
     <script type="module" src="/src/js/tasks.js"></script>
 </body>
 </html>

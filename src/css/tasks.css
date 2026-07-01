@@ -1,0 +1,298 @@
+.app-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Header Section */
+
+.app-header {
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.header-divider {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Grid Layout */
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.task-form-container {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.form-title {
+    color: var(--text-secondary);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.required-asterisk {
+    color: #ef233c;
+}
+
+/* Form Inputs */
+
+.form-input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+/* Custom Select */
+
+.custom-select-wrapper {
+    position: relative;
+}
+
+.custom-select-wrapper::after {
+    content: "▼";
+    font-size: 12px;
+    color: var(--text-primary);
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* Priority Radio Buttons */
+
+.priority-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.priority-label {
+    cursor: pointer;
+}
+
+.priority-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.priority-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.dot-low {
+    background-color: #3a86ff;
+}
+
+.dot-med {
+    background-color: #ffb703;
+}
+
+.dot-high {
+    background-color: #ef233c;
+}
+
+input[type="radio"]:checked + .priority-pill {
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Primary Button */
+
+.btn-primary {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #b39373;
+}
+
+/* Task Board */
+
+.task-board {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.board-tabs {
+    display: flex;
+    gap: 24px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: -12px;
+}
+
+.active {
+    color: var(--accent-color);
+}
+
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-color);
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+/* Empty State */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    border: 1px dashed #333;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.4);
+    text-align: center;
+    padding: 32px;
+}
+
+.empty-state-icon {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.empty-state-text {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.empty-state-subtext {
+    color: var(--text-secondary);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+/* Stats Footer */
+
+.board-footer {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.stat-number {
+    color: var(--text-primary);
+    margin-right: 8px;
+}
+
+@media (max-width: 850px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
