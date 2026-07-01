@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/settings.css">
 </head>
 <body>
   
@@ -26,7 +27,80 @@
         </nav>
     </div>
   </header>
-    
+
+  <main>
+    <header class="app-container">
+        <h1 class="visually-hidden">Settings & Analytics</h1>
+        <p class="subtitle">KEEP YOUR BRAIN CLEAR OF OVERHEAD. CAPTURE AND PRIORITIZE ITEMS.</p>
+        <hr class="header-divider" />
+    </header>
+
+    <div class="grid-container">
+
+
+
+    <div class="profile-container">
+    <form action="">
+        <label for="displayName" class="name-label">USER DISPLAY NAME</label>
+        <input type="text" id="displayName" name="displayName" class="form-name" placeholder="Focusing User" required>
+
+        <label for="email" class="email-label">NOTIFICATION EMAIL</label>
+        <input type="text" id="email" name="email" class="form-email" placeholder="pomodoro@emaili.com" required>
+
+            
+    <h2>TIMER DURATIONS (MINUETS)</h2>
+    <div class="timer-durations-container">
+        <div class="work-time-container">
+            <p class="timer-duration-text">Work</p>
+            <input type="number" id="work-input" value="25" >
+        </div>
+
+        <div class="short-break-container">
+            <p class="timer-duration-text"></p>
+            <input type="number" id="short-break-input" value="5" >
+        </div>
+
+        <div class="long-break-container">
+            <p class="timer-duration-text"></p>
+            <input type="number" id="long-break-input" value="15" >
+        </div>
+    </div>
+    <div class="daily-session-target-container">
+        <p></p>
+        <input type="number" id="long-break-input" value="4" >
+    </div>
+    </form>
+    </div>
+
+
+    <div class="focus-analitics-container">
+        <div class="focus-analytics-box">
+            <p>TOTAL FOCUS SESSIONS</p>
+            <p>0</p>
+        </div>
+        <div class="focus-analytics-box">
+            <p>TOTAL FOCUS SESSIONS</p>
+            <p>0m</p>
+        </div>
+        <div class="focus-analytics-box">
+            <p>TOTAL FOCUS SESSIONS</p>
+            <p>1 day</p>
+        </div>
+        <div class="focus-analytics-box">
+            <p>TOTAL FOCUS SESSIONS</p>
+            <p>0</p>
+        </div>
+    </div>
+
+    <div class="storage-operations-container">
+        <p></p>
+        <hr>
+
+        
+    </div>
+
+    </div>
+  </main>
     <footer>
     <div class="footer-container">
         <p>© MINIMALISTIC PRODUCTIVITY PLATFORM</p>
