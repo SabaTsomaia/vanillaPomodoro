@@ -51,7 +51,7 @@ main {
     text-align: center
 }
 
-.switch-btn.active {
+.activeClock{
     background-color: var(--border-color);
     border: var(--accent-color) 1px solid;
     color: var(--accent-color);   
