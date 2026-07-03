@@ -1,0 +1,3 @@
+# Adding API key to a js file without using an .env because i don't want to use NPM or Bundlers.
+# THIS IS NOT SECURE 
+/src/js/config.js
