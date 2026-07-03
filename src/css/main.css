@@ -283,8 +283,7 @@ main {
 }
 
 
-/* Responsive media queries */
-
+/* Responsive media*/
 @media (max-width: 768px) {
     .clock-container {    
         padding: 6px;
