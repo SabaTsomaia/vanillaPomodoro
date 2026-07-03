@@ -1,5 +1,6 @@
 footer {
     background-color: #131312;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -13,7 +14,6 @@ footer {
     height: 100px;
     color: var(--text-secondary);
     letter-spacing: 1.5px;
-    border-top: 1px solid var(--border-color);
     font-size: 21px;
 }
 
