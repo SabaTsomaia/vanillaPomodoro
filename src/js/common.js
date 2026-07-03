@@ -1,10 +1,15 @@
 export function updateNavigationBar(){
     const navLinks = document.querySelectorAll('header nav ul li a');
-    const currentPath = window.location.pathname;
+    let currentPath = window.location.pathname;
+    
+    console.log(currentPath)
+    if (currentPath === '/') {
+        currentPath = '/index.html';
+    }
 
     navLinks.forEach(link => {
         console.log(navLinks,link.getAttribute('href'));
-        if(link.getAttribute('href') === currentPath)
+        if(currentPath.includes(link.getAttribute('href')))
         {
             link.classList.add('active')
         }else {
