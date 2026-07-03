@@ -2,7 +2,7 @@ export function updateNavigationBar(){
     const navLinks = document.querySelectorAll('header nav ul li a');
     let currentPath = window.location.pathname;
     
-    console.log(currentPath)
+    // Let Default path be index.html and not /
     if (currentPath === '/') {
         currentPath = '/index.html';
     }
