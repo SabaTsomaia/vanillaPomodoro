@@ -314,6 +314,13 @@ input[type="radio"]:checked + .priority-pill {
     line-height: 1;
 }
 
+#task-title-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+}
+
 /* Stats Footer */
 .board-footer {
     display: flex;
