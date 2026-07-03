@@ -32,6 +32,11 @@ footer {
         align-items: center;
     }
 
+    .footer-container {
+        padding: 8px 8px;
+        font-size: 15px;
+    }
+
     .footer-container p {
         margin: 5px 0;
     }
