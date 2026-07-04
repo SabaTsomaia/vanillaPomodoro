@@ -23,6 +23,7 @@ main {
 
 .divider {
     margin-top: 18px;
+    margin-bottom: 20px;
     border: none;
     border: 1px solid var(--border-color);
 }
@@ -171,7 +172,7 @@ t
 .stat-box {
     border: 1px solid #343434;
     border-radius: 8px;
-    padding: 16px;
+    padding: 12px;
     min-height: 135px;
     display: flex;
     flex-direction: column;
