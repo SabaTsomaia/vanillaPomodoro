@@ -5,7 +5,9 @@ export function updateNavigationBar(){
     navLinks.forEach(link => {
         console.log(navLinks,link.getAttribute('href'));
         
-        if(currentPath.includes(link.getAttribute('href')))
+
+        const linkFile = link.pathname.split('/').pop() || 'index.html';
+        if(currentPath === linkFile)
         {
             link.classList.add('active')
         }else {
